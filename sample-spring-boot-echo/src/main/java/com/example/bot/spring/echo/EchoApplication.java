@@ -36,6 +36,10 @@ public class EchoApplication {
     @EventMapping
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
+		
+		if(event.getMessage().getText().equals("Hi")){
+		return new TextMessage("This is a test Message");
+		}
         return new TextMessage(event.getMessage().getText());
     }
 
