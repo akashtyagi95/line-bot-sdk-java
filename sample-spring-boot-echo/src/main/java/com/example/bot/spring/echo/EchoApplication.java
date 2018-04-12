@@ -40,7 +40,9 @@ public class EchoApplication {
 		if(event.getMessage().getText().equals("Hi")){
 		return new TextMessage("This is a test Message");
 		}
-        return new TextMessage(event.getMessage().getText());
+		else{
+        return new TextMessage("Testing purpose changes");
+		}
     }
 
     @EventMapping
